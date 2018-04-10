@@ -1,0 +1,75 @@
+.dd-info
+    width: 40%
+    text-align: left
+    +rmax($tabletmax)
+        width: 100%
+        text-align: center
+    .leonardo-list
+        text-align: left
+        width: 100%
+        margin: 0 auto 40px
+        +rmax($tabletmax)
+            width: 60%
+        +rmax($mobilerotatemax)
+            width: 80%
+        +rmax($mobilemax)
+            width: 100%
+
+.dd-title
+    color: $black
+    font-weight: 700
+    font-size: 26px
+    margin: 0 0 40px
+    +rmax($mobilerotatemax)
+        font-size: 30px
+        margin: 0 0 20px
+
+.dd-desc
+    font-size: 15px
+    line-height: 20px
+    margin: 0 0 40px
+    +rmax($laptopmax)
+        margin: 0 0 20px
+    +rmax($mobilerotatemax)
+        font-size: 18px
+        padding: 0 30px
+    +rmax($mobilemax)
+        padding: 0
+
+.video-mobile
+    display: none
+    +rmax($tabletmax)
+        display: block
+        margin: 45px auto
+        width: 75%
+    +rmax($mobilemax)
+        width: 100%
+        margin: 30px auto
+
+
+.download-btn
+    &.dd-btn
+        width: 100%
+        padding: 0
+        p
+            display: none
+        +rmax($tabletmax)
+            display: flex
+            justify-content: center
+            a
+                border: 0
+                padding: 0
+                pointer-events: none
+            img, span
+                display: none
+            p
+                color: $main-color
+                display: block
+                font-size: 20px
+                line-height: 25px
+                max-width: 180px
+
+.dd-video
+    width: 55%
+    +rmax($tabletmax)
+        display: none

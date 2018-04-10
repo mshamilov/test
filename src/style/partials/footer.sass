@@ -1,0 +1,141 @@
+.footer
+    position: absolute
+    left: 0
+    size: 100% auto
+    bottom: 0
+    +rmax($mobilemax)
+        position: relative
+
+.footer-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 27px 80px
+    background-color: $black
+    +rmax($laptopmax)
+        padding: 20px 40px
+    +rmax($tabletmax)
+        flex-direction: column
+        justify-content: center
+    +rmax($mobilerotatemax)
+        padding: 40px
+    +rmax($mobilemax)
+        padding: 40px 20px
+
+.footer-links
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    list-style: none
+    padding: 0
+    margin: 0
+    +rmax($tabletmax)
+        margin-bottom: 15px
+    +rmax($mobilemax)
+        flex-direction: column
+        justify-content: center
+    li
+        padding: 0 30px
+        +rmax($laptopmax)
+            padding: 0 10px
+        +rmax($mobilemax)
+            margin-bottom: 20px
+        &:first-child
+            padding: 0 30px 0 0
+            +rmax($laptopmax)
+                padding: 0 10px 0 0
+            +rmax($mobilemax)
+                padding: 0 10px
+        a
+            color: $white
+            font-size: 15px
+            font-weight: 400
+            text-decoration: underline
+            letter-spacing: -0.09px
+            white-space: nowrap
+            +rmax($laptopmax)
+                font-size: 14px
+            +rmax($tabletmax)
+                font-size: 20px
+            +rmax($mobilemax)
+                display: block
+
+.subscribe
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    +rmax($mobilerotatemax)
+        justify-content: center
+        flex-wrap: wrap
+    .subscribe-desc
+        color: $white
+        font-weight: 400
+        font-size: 15px
+        letter-spacing: -0.09px
+        margin: 0 24px 0 0
+        white-space: nowrap
+        +rmax($laptopmax)
+            font-size: 14px
+            margin: 0 15px 0 0
+        +rmax($mobilerotatemax)
+            font-size: 20px
+            margin: 0 0 20px 0
+            text-align: center
+            width: 100%
+    .form-group
+        display: flex
+        flex-direction: row
+        +rmax($mobilerotatemax)
+            width: 100%
+            max-width: 490px
+        +rmax($mobilemax)
+            flex-wrap: wrap
+            justify-content: center
+        .subscribe-input
+            size: 240px 52px
+            padding: 20px 15px
+            border: 1px solid rgba(186, 186, 186, 0.46)
+            color: $white
+            font-size: 15px
+            letter-spacing: -0.09px
+            background-color: transparent
+            +placeholder
+                font-style: italic
+                color: $white
+                opacity: 0.7
+            +rmax($laptopmax)
+                size: 220px 52px
+            +rmax($mobilerotatemax)
+                size: 65% 52px
+            +rmax($mobilemax)
+                size: 100% 52px
+                max-width: 300px
+        .subscribe-button
+            box-shadow: none
+            size: 134px 52px
+            border: 1px solid #06e2c9
+            background-color: $main-color
+            color: $white
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 1px
+                width: 0
+                background-color: $white
+                transition: all .6s
+            &:hover
+                &:before
+                    width: 100%
+            +rmax($laptopmax)
+                size: 130px 52px
+            +rmax($mobilerotatemax)
+                size: 35% 52px
+            +rmax($mobilemax)
+                size: 210px 52px
+                margin: 25px auto 0

@@ -1,0 +1,121 @@
+
+*
+    box-sizing: border-box
+
+.container
+    width: 1170px
+    margin: auto
+    max-width: 100%
+    +rmm($laptopmin, $laptopmax)
+        width: 940px
+    +rmm($tabletmin, $tabletmax)
+        width: 720px
+    +rmm($mobilerotatemin, $mobilerotatemax)
+        width: 544px
+    +rmm($mobilemin, $mobilemax)
+        width: 100%
+        padding: 0 15px
+
+a
+    text-decoration: none
+    &:active, &:hover, &:focus
+        text-decoration: none
+
+button, input
+    outline: none
+
+html
+    font-family: 'Open Sans', sans-serif
+
+body
+    overflow-x: hidden
+    min-height: 100vh
+    padding-bottom: 106px
+    position: relative
+    +rmax($tabletmax)
+        padding-bottom: 129px
+    +rmax($mobilerotatemax)
+        padding-bottom: 221px
+    +rmax($mobilemax)
+        padding-bottom: 0
+    &.hidden
+        overflow: hidden
+
+main
+    overflow: hidden
+
+.text-font
+    font-family: 'Lato', 'Open Sans', sans-serif
+    font-weight: 300
+    &.text-semibold
+        font-weight: 700
+
+.text-center
+    text-align: center
+
+.icon 
+    display: inline-block
+
+%img
+    size: auto
+    max-height: 100%
+    max-width: 100%
+
+
+.content
+    width: 100%
+    padding: 50px 0
+    background-image: url('../img/ui/background-content.png')
+    background-position: top left
+    background-size: 35% auto
+    background-repeat: no-repeat
+    min-height: calc(100vh - 203px)
+    &.nonbackground
+        background-image: none
+    +rmax($mobilerotatemax)
+        padding: 117px 0 50px
+        background-size: auto 340px
+
+.content-wrap
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+
+.title-page
+    color: $black
+    font-size: 55px
+    font-weight: 700
+    letter-spacing: -0.34px
+    margin: 0 0 30px
+    +rmax($tabletmax)
+        font-size: 40px
+        margin: 0 0 15px
+    +rmax($mobilerotatemax)
+
+.desc-page
+    color: $black
+    font-size: 20px
+    line-height: 27px
+    margin: 0 auto
+    width: 65%
+    +rmax($tabletmax)
+        width: 80%
+    +rmax($mobilemax)
+        width: 100%
+
+.leonardo-list
+    margin: 0 auto 40px
+    padding: 0 0 0 20px
+    +rmax($laptopmax)
+        margin: 0 auto 20px
+    li
+        color: $main-color
+        margin: 0 0 5px
+        span
+            color: $black
+            font-size: 15px
+            line-height: 20px
+
+

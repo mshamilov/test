@@ -1,0 +1,47 @@
+.about-main
+    height: auto
+    min-height: 100vh
+    display: flex
+    align-items: center
+    background-color: $black
+    padding: 80px 0
+
+.about-main-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .ico-img
+        justify-content: flex-end
+        img
+            max-width: 380px
+            +rmax($laptopmax)
+                max-width: 320px
+            +rmax($tabletmax)
+                max-width: 275px
+
+.about-main-text
+    width: 50%
+
+.render-line
+    &.ico-line
+        margin: 35px 0 40px
+        +rmax($tabletmax)
+            margin: 35px 0
+
+.render-title
+    &.change-color
+        color: $white
+
+.ico-desc
+    &.change-color
+        color: $white
+
+.render-btn
+    &.about-main-btn
+        margin: 50px 0 0
+        a
+            background-color: transparent
+            color: $main-color
+            min-width: 235px
+            border: 1px solid $main-color
+            font-size: 15px

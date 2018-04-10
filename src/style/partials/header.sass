@@ -1,0 +1,180 @@
+.header
+    width: 100%
+    +rmax($mobilerotatemax)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 98
+
+.header-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    border: 1px solid $border-color
+    background-color: $white
+
+
+.logo
+    width: 85px
+    height: 95px
+    padding: 9px 0 11px
+    margin: 0 auto 0 34px
+    +rmax($laptopmax)
+        height: 80px
+        width: 70px
+        padding: 14px 0 9px
+    +rmax($tabletmax)
+        height: 60px
+    +rmax($mobilerotatemax)
+        height: 65px
+        padding: 9px 0 11px
+        margin: 0 auto 0 15px
+        width: auto
+    img
+        @extend %img
+        +rmax($mobilerotatemax)
+            height: 100%
+            width: auto
+    
+.download-header-btn
+    margin: 0
+    +rmax($mobilerotatemax)
+        display: none
+    .download_link
+        display: flex
+        justify-content: center
+        align-items: center
+        size: 160px 95px
+        border: 1px solid $border-color
+        color: $white $main-color
+        font-size: 15px
+        font-weight: 600
+        line-height: 26.35px
+        letter-spacing: -0.3px
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 1px
+            width: 0
+            background-color: $white
+            transition: all .6s
+        &:hover
+            &:before
+                width: 100%
+        +rmax($laptopmax)
+            size: 140px 80px
+        +rmax($tabletmax)
+            size: 120px 60px
+
+.menu-box
+    margin: 0 30px
+    size: 15px
+    +rmax($tabletmax)
+        margin: 0 20px
+    +rmax($mobilerotatemax)
+        margin: 0 27px
+    &.disabled
+        pointer-events: none
+    img
+        @extend %img
+
+.menu-list-wrap
+    overflow: hidden
+    +rmax($mobilerotatemax)
+        position: absolute
+        top: 67px
+        left: 0
+        width: 100vw
+        height: calc(100vh - 67px)
+        background-color: transparent
+        display: none
+    &.active
+        +rmax($mobilemax)
+            display: block
+
+.menu-list
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    margin: 0 0 0 auto
+    position: relative
+    list-style: none
+    padding: 0
+    +rmax($mobilerotatemax)
+        flex-wrap: wrap
+        align-items: flex-start
+        transform: translate(0, 0) !important
+        height: 100%
+        display: flex
+    &.active
+        transform: translateX(0) !important
+        +rmax($mobilerotatemax)
+        .menu-item
+            &:nth-child(odd)
+                +rmax($mobilerotatemax)
+                    transform: translateX(0)
+            &:nth-child(even)
+                +rmax($mobilerotatemax)
+                    transform: translateX(0)
+    .menu-item
+        padding: 0 20px
+        order: 2
+        +rmax($laptopmax)
+            padding: 0 10px
+        +rmax($tabletmax)
+            padding: 0 7px
+        +rmax($mobilerotatemax)
+            width: 25%
+            padding: 0
+        +rmax($mobilemax)
+            width: 50%
+        &.current-menu-item
+            order: 1
+            +rmax($mobilerotatemax)
+                order: 2
+            a
+                border-bottom: 2px solid $black
+                font-weight: 600
+                +rmax($mobilerotatemax)
+                    background-color: $main-color
+                    border-bottom: 1px solid #cccccc
+                    color: $white
+        a
+            height: 94px
+            display: flex
+            align-items: center
+            color: $black
+            font-size: 16px
+            font-weight: 400
+            letter-spacing: -0.32px
+            border-bottom: 2px solid transparent
+            border-top: 2px solid transparent
+            white-space: nowrap
+            +rmax($laptopmax)
+                font-size: 14px
+                height: 79px
+            +rmax($tabletmax)
+                height: 59px
+                font-size: 12px
+            +rmax($mobilerotatemax)
+                height: 150px
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                border: 1px solid #cccccc
+                background-color: $white
+        &:nth-child(odd)
+            +rmax($mobilemax)
+                transform: translateX(-100%)
+                transition: transform .6s
+        &:nth-child(even)
+            +rmax($mobilemax)
+                transform: translateX(100%)
+                transition: transform .6s

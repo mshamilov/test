@@ -1,0 +1,55 @@
+.faq
+    text-align: center
+    &.content
+        +rmax($mobilerotatemax)
+            padding-bottom: 0
+
+.faq-list
+    list-style: none
+    padding: 0
+    margin: 0
+    text-align: left
+    width: 100%
+    +rmax($mobilerotatemax)
+        padding: 40px 0 0
+
+.faq-el
+    padding: 25px 0
+    width: 100%
+    border-bottom: 1px solid rgba(9, 9, 9, .4)
+    &:nth-child(1)
+        .faq-desc
+            display: block
+
+.faq-title
+    color: $black
+    font-size: 18px
+    font-weight: 600
+    width: 100%
+    margin: 0
+    position: relative
+    &:hover
+        cursor: pointer
+    &:before
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%) rotate(0)
+        right: 5px
+        width: 11px
+        height: 16px
+        background-image: url('../img/ui/arrow_up.png')
+        background-repeat: no-repeat
+        background-size: 11px 16px
+        background-position: center center
+        transform-origin: center center
+        transition: transform .4s
+    &.open
+        &:before
+            transform: translateY(-50%) rotate(180deg)
+
+.faq-desc
+    font-size: 15px
+    width: 80%
+    margin: 20px 0 10px
+    display: none

@@ -1,0 +1,66 @@
+.problem
+    height: auto
+    min-height: 100vh
+    display: flex
+    align-items: center
+    padding: 80px 0
+    +rmax($tabletmax)
+
+.problem-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: stretch
+
+.problem-title
+    text-align: center
+    width: 100%
+    font-size: 30px
+    font-weight: 700
+    color: $black
+    margin: 0 0 120px 0
+    +rmax($tabletmax)
+        font-size: 40px
+        line-height: 45px
+        margin: 0 0 70px 0
+    span
+        color: $main-color
+
+
+.problem-el
+    display: flex
+    justify-content: space-between
+    width: calc(50% - 60px)
+    margin-bottom: 120px
+    +rmax($laptopmax)
+        width: calc(50% - 30px)
+    +rmax($tabletmax)
+        width: 100%
+        margin-bottom: 50px
+    &:nth-last-child(-n+2)
+        margin-bottom: 0
+        +rmax($tabletmax)
+            margin-bottom: 50px
+    &:last-child
+        +rmax($tabletmax)
+            margin-bottom: 0
+    .problem-el-img
+        width: 220px
+        padding: 0 50px 0 0
+        flex-shrink: 0
+        img
+            @extend %img
+    .problem-el-text
+        .problem-el-text_title
+            color: $black
+            font-size: 24px
+            font-weight: 700
+            margin: 0 0 30px
+        .problem-el-text_desc
+            color: $black
+            font-size: 15px
+            line-height: 22px
+            margin: 0
+
+
+

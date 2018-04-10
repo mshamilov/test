@@ -1,0 +1,170 @@
+.project
+    width: 100%
+
+.project-logo
+    width: 100%
+    height: 400px
+    +rmax($laptopmax)
+        height: 350px
+    +rmax($tabletmax)
+        height: 280px
+    +rmax($mobilerotatemax)
+        height: 230px
+    +rmax($mobilemax)
+        height: 175px
+    img
+        size: 100%
+        object-fit: cover
+
+.project-wrap
+    padding: 50px 0 90px
+    +rmax($laptopmax)
+        padding: 35px 0 75px
+    +rmax($tabletmax)
+        padding: 25px 0 50px
+
+.project-title
+    display: flex
+    flex-direction: row
+    align-items: center
+    +rmax($mobilemax)
+        flex-direction: column
+    .client-name, .project-name
+        font-size: 24px
+        color: $black
+        margin: 0
+        position: relative
+    .client-name
+        font-weight: 700
+        padding-right: 10px
+        +rmax($mobilemax)
+            padding: 0
+        &+.project-name
+            padding-left: 10px
+            +rmax($mobilemax)
+                padding: 0
+            &:before
+                content: ''
+                position: absolute
+                top: 50%
+                left: -1px
+                transform: translateY(-50%)
+                size: 2px 24px
+                background-color: $black
+                +rmax($mobilemax)
+                    display: none
+    .project-name
+        font-weight: 400
+
+
+.project-advantages
+    margin: 80px 0 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: stretch
+    +rmax($laptopmax)
+        margin: 60px 0 0
+    +rmax($tabletmax)
+        margin: 40px 0 0
+    +rmax($mobilerotatemax)
+        flex-wrap: wrap
+
+.pa-el
+    width: 25%
+    padding: 0 0 40px 0
+    +rmax($tabletmax)
+        padding: 0
+    +rmax($mobilerotatemax)
+        width: 50%
+        margin-bottom: 30px
+    +rmax($mobilemax)
+        width: 100%
+        text-align: center
+    .pa-el_numb
+        color: $main-color
+        font-size: 60px
+        margin: 0
+        +rmax($laptopmax)
+            font-size: 48px
+        +rmax($tabletmax)
+            font-size: 36px
+        +rmax($mobilerotatemax)
+            font-size: 60px
+    .pa-el_line
+        height: 3px
+        width: calc(100% - 40px)
+        background-color: $main-color
+        border: 0
+        margin: 17px 0
+        +rmax($tabletmax)
+            margin: 10px 0
+        +rmax($mobilerotatemax)
+            margin: 15px 0
+        +rmax($mobilemax)
+            margin: 15px auto
+    .pa-el_title
+        font-size: 20px
+        bolor: $black
+        margin: 0
+        +rmax($tabletmax)
+            font-size: 16px
+        +rmax($mobilerotatemax)
+            font-size: 20px
+
+.project-description
+    width: 100%
+    margin: 100px auto 0
+    +rmax($laptopmax)
+        margin: 60px 0 0
+    +rmax($mobilerotatemax)
+        margin: 20px 0 0
+    .pd-title
+        color: $black
+        font-size: 25px
+        margin: 0 auto 15px
+        font-weight: 700
+        line-height: 27px
+        +rmax($tabletmax)
+            font-size: 22px
+        +rmax($mobilemax)
+            font-size: 20px
+    .pd-desc
+        font-size: 20px
+        line-height: 27px
+        color: $black
+        margin: 0 auto 15px
+        +rmax($tabletmax)
+            margin: 0 auto 10px
+            font-size: 18px
+        +rmax($mobilemax)
+            font-size: 20px
+    .pd-img
+        margin: 60px auto 70px
+        width: 100%
+        height: 450px
+        +rmax($laptopmax)
+            margin: 45px auto
+            height: 400px
+        +rmax($tabletmax)
+            margin: 30px auto
+            height: 300px
+        +rmax($mobilerotatemax)
+            height: 200px
+        +rmax($mobilemax)
+            height: 160px
+        img
+            size: 100%
+            object-fit: cover
+
+.project-list
+    margin: 45px auto 0
+
+.pd-title, .pd-desc, .project-list
+    width: 70%
+    +rmax($laptopmax)
+        width: 80%
+    +rmax($tabletmax)
+        width: 90%
+    +rmax($mobilemax)
+        width: 100%

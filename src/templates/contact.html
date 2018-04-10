@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leonardo | Contact</title>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    {% include "partials/header.html" %}
+    <main>
+        <div class="contact nonbackground content">
+            <div class="container">
+                <h1 class="title-page">
+                    Contact Us
+                </h1>
+                    <p class="desc-page text-font">
+                    Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Si longus, levis dictata sunt.
+                </p>
+                <div class="content-wrap">
+                    <form class="contact-form">
+                        <div class="contact-wrap">
+                            <div class="form-group contact-group">
+                                <input type="text" name="firstName" placeholder="First Name" id="firstname">
+                                <span></span>
+                            </div>
+                            <div class="form-group contact-group">
+                                <input type="text" name="lastName" placeholder="Last Name">
+                                <span></span>
+                            </div>
+                            <div class="form-group contact-group">
+                                <input type="email" name="email" placeholder="Email Address" id="email">
+                                <span></span>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group contact-group contact-group-msg">
+                            <textarea name="message" placeholder="Your Message"></textarea>
+                            <span></span>
+                        </div>
+                        <div class="form-group contact-btn">
+                            <button>
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include "partials/footer.html" %}
+    {% include "partials/scripts.html" %}
+</body>
+</html>

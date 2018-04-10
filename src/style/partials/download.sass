@@ -1,0 +1,107 @@
+.download
+    text-align: center
+
+.download-group
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    margin: 45px 0 0
+    +rmax($tabletmax)
+        margin: 30px 0 0
+    +rmax($mobilerotatemax)
+        flex-wrap: wrap
+        justify-content: center
+
+.download-btn
+    width: 50%
+    padding: 0 18px
+    display: flex
+    +rmax($mobilerotatemax)
+        width: 100%
+        padding: 10px 0
+    &.download-mac
+        a
+            margin: auto 0 auto auto
+            +rmax($mobilerotatemax)
+                margin: auto
+    &.download-pc
+        a
+            margin: auto auto auto 0
+            +rmax($mobilerotatemax)
+                margin: auto
+    a
+        padding: 18px 30px
+        border: 1px solid $main-color2
+        background-color: $white
+        display: inline-flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        transition: all .6s
+        img
+            height: 19px
+            width: auto
+            margin: 0 11px 0 0
+        span
+            font-size: 15px
+            font-weight: 600
+            color: $main-color
+        &:hover
+            border: 1px solid $black
+
+.download-advantages
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: stretch
+    margin: 80px 0 30px
+    +rmax($tabletmax)
+        margin: 50px 0 20px
+    +rmax($mobilerotatemax)
+        flex-wrap: wrap
+        justify-content: center
+        margin: 0 0 20px
+.da-el
+    width: 33.33%
+    padding: 0 60px 20px 60px
+    position: relative
+    +rmax($laptopmax)
+        padding: 0 45px 20px
+    +rmax($tabletmax)
+        padding: 0 20px 20px
+    +rmax($mobilerotatemax)
+        width: 100%
+        max-width: 300px
+        padding: 50px 10px 0  
+    &:nth-child(3n+2)
+        &:before, &:after
+            content: ''
+            position: absolute
+            top: 0
+            height: 100%
+            width: 1px
+            background-color: rgba(0, 0, 0, .2)
+            +rmax($mobilerotatemax)
+                display: none
+        &:before
+            left: -1px
+        &:after
+            right: -1px
+    .da-el_img
+        size: 90px 120px
+        display: flex
+        margin: auto
+        img
+            @extend %img
+            margin: auto
+    .da-el_title
+        margin: -15px 0 30px
+        font-weight: 700
+        font-size: 18px
+        color: $black
+    .da-el_desc
+        font-size: 15px
+        margin: 0
+        line-height: 20px
+        color: $black

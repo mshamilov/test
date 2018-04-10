@@ -1,0 +1,183 @@
+.team-logo
+    width: 40%
+    position: relative
+    display: block
+    +rmax($mobilerotatemax)
+        width: 100%
+        text-align: center
+        margin-bottom: 40px
+    &:before, &:after
+        content: ''
+        position: absolute
+        top: calc( 100% - 17px)
+        height: 20px
+        width: 115px
+        background-image: url('../img/content/shadow-mini.png')
+        background-repeat: no-repeat
+        background-size: 115px 20px
+        z-index: 2
+        +rmax($mobilerotatemax)
+            background-size: 80px 10px
+            top: calc(100% - 12px)
+    &:before
+        left: 17px
+        +rmax($tabletmax)
+            left: 2px
+        +rmax($mobilerotatemax)
+            left: 32%
+    &:after
+        left: 187px
+        +rmax($tabletmax)
+            left: 136px
+        +rmax($mobilerotatemax)
+            left: 52%
+    .team-logo_img
+        size: 325px 290px
+        +rmax($tabletmax)
+            size: 90% auto
+        +rmax($mobilerotatemax)
+            size: 210px auto
+    .team-logo_shadow
+        size: 325px 120px
+        position: absolute
+        top: calc(100% - 10px)
+        left: 0
+        z-index: 1
+        +rmax($tabletmax)
+            size: 90% auto
+        +rmax($mobilerotatemax)
+            size: 210px auto
+            left: 50%
+            transform: translateX(-50%)
+
+.team-desc
+    width: 60%
+    +rmax($mobilerotatemax)
+        width: 100%
+        text-align: center
+
+.team-line
+    display: none
+    +rmax($mobilerotatemax)
+        width: 120px
+        height: 3px
+        background-color: $main-color
+        margin: 20px auto 30px
+        display: block
+        border: 0
+
+.team-list
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: wrap
+    margin: 85px 0 0
+    text-align: left
+    +rmax($mobilerotatemax)
+        justify-content: center
+        margin: 40px 0 0
+
+.team-el
+    width: 50%
+    display: flex
+    flex-direction: row
+    margin-bottom: 90px
+    +rmax($laptopmax)
+        margin-bottom: 60px
+    +rmax($mobilerotatemax)
+        width: 100%
+        max-width: 360px
+    &:last-child
+        +rmax($mobilerotatemax)
+            margin-bottom: 0
+    .team-el_img
+        size: 240px 240px
+        +rmax($laptopmax)
+            size: 200px
+        +rmax($tabletmax)
+            size: 140px
+        +rmax($mobilerotatemax)
+            size: 150px
+        +rmax($mobilemax)
+            size: 120px
+        img
+            @extend %img
+            object-fit: cover
+    .team-el_info
+        padding: 19px 80px 19px 40px
+        width: calc(100% - 240px)
+        +rmax($laptopmax)
+            padding: 15px 30px
+            width: calc(100% - 200px)
+        +rmax($tabletmax)
+            padding: 10px 20px
+            width: calc( 100% - 140px)
+        +rmax($mobilerotatemax)
+            width: calc(100% - 150px)
+            padding: 0 0 0 20px
+        +rmax($mobilemax)
+            width: calc(100% - 120px)
+        .info-line
+            width: 80px
+            height: 4px
+            background-color: $main-color
+            margin: 0 0 30px
+            border: 0
+            +rmax($laptopmax)
+                margin: 0 0 15px
+            +rmax($tabletmax)
+                margin: 0 0 10px
+            +rmax($mobilerotatemax)
+                margin: 0 0 20px
+            +rmax($mobilemax)
+                margin: 0 0 10px
+        .info-name, .info-status
+            color: $black
+            font-size: 18px
+            margin: 0
+            +rmax($tabletmax)
+                font-size: 16px
+            +rmax($mobilerotatemax)
+                font-size: 15px
+        .info-name
+            font-weight: 700
+        .info-status
+            font-weight: 400
+            margin-bottom: 18px
+            +rmax($laptopmax)
+                margin-bottom: 10px
+            +rmax($tabletmax)
+                margin-bottom: 7px
+            +rmax($mobilerotatemax)
+                margin-bottom: 15px
+            +rmax($mobilemax)
+                margin-bottom: 5px 
+        .info-desc
+            color: $black
+            font-size: 15px
+            line-height: 20px
+            margin: 0 0 18px
+            +rmax($laptopmax)
+                margin: 0 0 10px
+            +rmax($tabletmax)
+                font-size: 14px
+            +rmax($mobilerotatemax)
+                font-size: 15px
+                
+                
+        .info-btn
+            a
+                color: $main-color
+                font-size: 12px
+                font-weight: 400
+                border: 1px solid $main-color2
+                padding: 9px 25px
+                min-width: 120px
+                min-height: 37px
+                display: inline-block
+                text-align: center
+                transition: all .6s
+                &:hover
+                    border: 1px solid $black

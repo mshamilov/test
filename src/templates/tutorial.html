@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leonardo | Downloads Detalic</title>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    {% include "partials/header.html" %}
+    <main>
+        <div class="tutorial nonbackground content">
+            <div class="container">
+                <h1 class="title-page">
+                    Getting Started
+                </h1>
+                <p class="desc-page text-font">
+                    Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Si longus, levis dictata sunt.
+                </p>
+                <div class="content-wrap">
+                    <div class="video-center">
+                        <a href="#" class="video-el modal-youtube youtube-btn">
+                            <p class="youtube-id">SfLV8hD7zX4</p>
+                            <div class="video-el_img"></div>
+                            <p class="video-el_name">Tutorial Title</p>
+                            <div class="video-init" id="SfLV8hD7zX4"></div>
+                            <p class="video-el_time"></p>
+                            <p class="video-el_desc text-font">
+                                Lorem ipsum dolor sit amet, magna su consectetur adipiscing elit erat.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="video-list">
+                        <a href="#" class="video-el modal-youtube youtube-btn">
+                            <p class="youtube-id">Xa0Q0J5tOP0</p>
+                            <div class="video-el_img"></div>
+                            <p class="video-el_name">Tutorial Title</p>
+                            <div class="video-init" id="Xa0Q0J5tOP0"></div>
+                            <p class="video-el_time"></p>
+                            <p class="video-el_desc text-font">
+                                Lorem ipsum dolor sit amet, magna su consectetur adipiscing elit erat.
+                            </p>
+                        </a>
+                        <a href="#" class="video-el modal-youtube youtube-btn">
+                            <p class="youtube-id">xpyrefzvTpI</p>
+                            <div class="video-el_img"></div>
+                            <p class="video-el_name">Tutorial Title</p>
+                            <div class="video-init" id="xpyrefzvTpI"></div>
+                            <p class="video-el_time" ></p>
+                            <p class="video-el_desc text-font">
+                                Lorem ipsum dolor sit amet, magna su consectetur adipiscing elit erat.
+                            </p>
+                        </a>
+                        <a href="#" class="video-el modal-youtube youtube-btn">
+                            <p class="youtube-id">VGfGxqHPF0s</p>
+                            <div class="video-el_img"></div>
+                            <p class="video-el_name">Tutorial Title</p>
+                            <div class="video-init" id="VGfGxqHPF0s"></div>
+                            <p class="video-el_time"></p>
+                            <p class="video-el_desc text-font">
+                                Lorem ipsum dolor sit amet, magna su consectetur adipiscing elit erat.
+                            </p>
+                        </a>
+                        <a href="#" class="video-el modal-youtube youtube-btn">
+                            <p class="youtube-id">0-evZfb-wuM</p>
+                            <div class="video-el_img"></div>
+                            <p class="video-el_name">Tutorial Title</p>
+                            <div class="video-init" id="0-evZfb-wuM"></div>
+                            <p class="video-el_time"></p>
+                            <p class="video-el_desc text-font">
+                                Lorem ipsum dolor sit amet, magna su consectetur adipiscing elit erat.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include "partials/footer.html" %}
+    {% include "partials/modal-youtube.html" %}
+    {% include "partials/scripts.html" %}
+    <script>
+        let youEl, yourElTime
+        let player = []
+        let arrMasTime = [];
+        let countEl = 0;
+        function onYouTubeIframeAPIReady() {
+            $('.video-el').each((i, el) => {
+                yourEl = $(el).find('.youtube-id').text()
+                yourElTime = $(el).find('.video-el_time')
+                arrMasTime.push(yourElTime);
+                player[i] = new YT.Player(yourEl, {
+                    width: '100%',
+                    height: '100%',
+                    videoId: yourEl,
+                    events: {
+                        onReady: (event) => {
+                            updateTimerDisplay(event, countEl)
+                            countEl++
+                        }
+                    }
+                })
+            });
+        }
+        function updateTimerDisplay(event, i){
+            $(arrMasTime[i]).text(formatTime(event.target.getDuration()));
+        }
+
+        function formatTime(time){
+            time = Math.round(time);
+            minutes = Math.floor(time / 60),
+            seconds = time - minutes * 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            return minutes + ":" + seconds;
+        }  
+    </script>
+</body>
+</html>

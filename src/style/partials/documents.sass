@@ -1,0 +1,46 @@
+.documents
+    display: flex
+    align-items: center
+    height: auto
+    min-height: 650px
+    padding: 120px 0
+    +rmax($tabletmax)
+        min-height: 0
+        padding: 80px 0
+
+.documents-wrap
+    display: flex
+    justify-content: space-between
+    +rmax($tabletmax)
+        flex-wrap: wrap
+
+.documents-text
+    width: 50%
+    padding: 0 25px 0 0
+    +rmax($tabletmax)
+        width: 100%
+        padding: 0
+        margin-bottom: 60px
+
+.documents-advantages
+    width: 50%
+    padding: 0 0 0 25px
+    +rmax($tabletmax)
+        width: 100%
+        padding: 0
+
+.documents-el
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+    &:last-child
+        margin-bottom: 0
+    .document-el_img
+        width: 60px
+        margin-right: 20px
+        flex-shrink: 0
+        img
+            @extend %img
+    .document-el_title
+        color: $main-color
+        font-size: 24px

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leonardo | About</title>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    {% include "partials/header.html" %}
+    <main class="home-page">
+        <div class="home-bg top">
+            <img src="img/content/home-bg1.png" alt="bg">
+        </div>
+         <div class="home-bg bot">
+            <img src="img/content/home-bg1.png" alt="bg">
+        </div>
+        <div class="rendering">
+            <div class="container">
+                <div class="rendering-wrap">
+                    <div class="render-info animate">
+                        <h1 class="render-title">
+                            <span>Rendering</span>
+                            Reimagined.
+                        </h1>
+                        <hr class="render-line">
+                        <p class="render-desc text-font">
+                            Bring your work to life with the fastest, simplest, and most affordable cloud-based rendering solution.
+                        </p>
+                        <div class="render-btn">
+                            <a href="downloads.html">
+                                Download Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="render-img first-cube">
+                        <img class="render-img_cube" src="img/content/home-img1.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rendering order small-element">
+            <div class="container">
+                <div class="rendering-wrap">
+                    <div class="render-info animate">
+                        <h1 class="render-title">
+                            <span>What</span>
+                             is Leonardo?
+                        </h1>
+                        <hr class="render-line">
+                        <p class="render-desc text-font render-desc-small">
+                            Leonardo is a cutting edge rendering solution that processes your images in real time, with incredible speed, while keeping your content protected.
+                        </p>
+                        <div class="render-btn">
+                            <div class="download-mac download-btn">
+                                <a href="downloadDetails.html">
+                                    <img src="img/content/apple.png" alt="download">
+                                    <span>Mac Download Details</span>
+                                </a>
+                            </div>
+                            <div class="download-pc download-btn">
+                                <a href="downloadDetails.html">
+                                    <img src="img/content/windows.png" alt="download">
+                                    <span>PC Download Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="render-img second-cube">
+                        <img class="render-img_cube" src="img/content/home-img2.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rendering order-normal small-element">
+            <div class="container">
+                <div class="rendering-wrap">
+                    <div class="render-info animate">
+                        <h1 class="render-title">
+                            <span>How</span>
+                              it works.
+                        </h1>
+                        <hr class="render-line">
+                        <p class="render-desc text-font render-desc-small">
+                            Leonardo offers a unique rendering experience. 
+                        </p>
+                        <p class="render-desc text-font render-desc-small">
+                            Our massive GPU matrix connects directly to your laptop, 
+                            allowing you to render images in real time, on your screen, 
+                            without a change to your workflow.
+                        </p>
+                        <p class="render-desc text-font render-desc-small">
+                            You’ll feel like multiple, powerful GPU rigs are inside your 
+                            own computer.
+                        </p>
+                        
+                    </div>
+                    <div class="render-img third-cube">
+                        <img class="render-img_cube" src="img/content/home-img3.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pricing">
+            <div class="container">
+                <div class="pricing-wrap">
+                    <h2 class="pricing-title animate">
+                        Pricing
+                    </h2>
+                    <p class="pricing-desc text-font animate">
+                        Unlimited Rendering: <span>$99.99 / month</span>
+                    </p>
+                    <div class="pricing-list">
+                        <div class="pricing-el animate">
+                            <p class="pricing-el_title">
+                                Instant Rendering
+                            </p>
+                            <p class="pricing-el_desc"></p>
+                        </div>
+                        <div class="pricing-el animate">
+                            <p class="pricing-el_title">
+                                Shareable Render Files in the Cloud
+                            </p>
+                            <p class="pricing-el_desc"></p>
+                        </div>
+                        <div class="pricing-el animate">
+                            <p class="pricing-el_title">
+                                All Supported File Formats 
+                            </p>
+                            <p class="pricing-el_desc">(.aep, .c4d, fcp)</p>
+                        </div>
+                        <div class="pricing-el animate">
+                            <p class="pricing-el_title">
+                                24/7 Customer Support
+                            </p>
+                            <p class="pricing-el_desc"></p>
+                        </div>
+                        <div class="pricing-el animate">
+                            <p class="pricing-el_title">
+                                FTP Access to Render and Source Files
+                            </p>
+                            <p class="pricing-el_desc"></p>
+                        </div>
+                    </div>
+                    <div class="pricing-btn">
+                        <div class="download-mac download-btn">
+                            <a href="downloadDetails.html">
+                                <img src="img/content/apple.png" alt="download">
+                                <span>Mac Download Details</span>
+                            </a>
+                        </div>
+                        <div class="download-pc download-btn">
+                            <a href="downloadDetails.html">
+                                <img src="img/content/windows.png" alt="download">
+                                <span>PC Download Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include "partials/footer.html" %}
+    {% include "partials/scripts.html" %}
+</body>
+</html>
+
+    <!-- <script>
+        let player1, player2, player3, player4;
+        let youEl
+        let arrMas = []
+        let arrMasTime = []
+        
+        function onYouTubeIframeAPIReady() {
+            $('.video-el').each((i, el) => {
+                yourEl = $(el).find('.youtube-id').text()
+                yourElTime = $(el).find('.video-el_time')
+                arrMas.push(yourEl)
+                arrMasTime.push(yourElTime)
+                
+            })
+            player1 = new YT.Player(arrMas[0], {
+            width: '100%',
+            height: '100%',
+            videoId: arrMas[0],
+            events: {
+                onReady: updateTimerDisplay1
+            }
+            });
+            player2 = new YT.Player(arrMas[1], {
+            width: '100%',
+            height: '100%',
+            videoId: arrMas[1],
+            events: {
+                onReady: updateTimerDisplay2
+            }
+            });
+            player3 = new YT.Player(arrMas[2], {
+            width: '100%',
+            height: '100%',
+            videoId: arrMas[2],
+            events: {
+                onReady: updateTimerDisplay3
+            }
+            });
+            player4 = new YT.Player(arrMas[3], {
+            width: '100%',
+            height: '100%',
+            videoId: arrMas[3],
+            events: {
+                onReady: updateTimerDisplay4
+            }
+            });
+            player = new YT.Player('video-center', {
+                width: '100%',
+                height: '100%',
+                videoId: 'Xa0Q0J5tOP0',
+                playerVars: {
+                    showinfo: 0,
+                    autoplay: 0,
+                    rel: 0
+                },
+                events: {
+                    onReady: updateTimerDisplayList
+                }
+            });
+        }
+        function updateTimerDisplayList(){
+            $('.video-center-time').html(formatTime( player.getDuration() ));
+        } 
+        function updateTimerDisplay1(){
+            $(arrMasTime[0]).html(formatTime( player1.getDuration() ));
+        }
+        function updateTimerDisplay2(){
+            $(arrMasTime[1]).html(formatTime( player2.getDuration() ));
+        }
+        function updateTimerDisplay3(){
+            $(arrMasTime[2]).html(formatTime( player3.getDuration() ));
+        }
+        function updateTimerDisplay4(){
+            $(arrMasTime[3]).html(formatTime( player4.getDuration() ));
+        }
+
+        function formatTime(time){
+            time = Math.round(time);
+
+            var minutes = Math.floor(time / 60),
+            seconds = time - minutes * 60;
+
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            return minutes + ":" + seconds;
+        }
+    </script> -->
+    

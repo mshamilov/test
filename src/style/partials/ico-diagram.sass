@@ -1,0 +1,241 @@
+.ico-diagram
+    height: auto
+    min-height: 100vh
+    display: flex
+    align-items: center
+    background-color: $black
+    padding: 80px 0
+
+.ico-diagram-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    position: relative
+    width: 82%
+    margin: auto
+    +rmax($laptopmax)
+        width: 100%
+
+.diagram-line
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 0
+    height: 100%
+    width: 2px
+    background-color: $main-color2
+    z-index: 1
+
+.diagram-title
+    position: absolute
+    top: -25px
+    right: 0
+    font-size: 12px
+    color: $white
+    margin: 0
+    &.middle-member
+        top: calc(100% + 20px)
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        &:before
+            content: ''
+            position: absolute
+            bottom: 100%
+            left: 50%
+            transform: translateX(-50%)
+            height: 50px
+            width: 2px
+            background-color: $white
+
+
+.start-row
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 25px
+    position: relative
+    z-index: 2
+
+.start-el
+    width: 33.33%
+    display: flex
+    justify-content: center
+
+.diagram-software
+    min-width: 235px
+    min-height: 55px
+    border: 1px solid $main-color2
+    background-color: $main-color2
+    margin: 0 40px 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 17px 50px
+    position: relative
+    z-index: 1
+    +rmax($tabletmax)
+        min-width: 200px
+        min-height: 45px
+        padding: 12px 15px
+    &:before
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 100% 
+        height: 2px
+        width: 100%
+        background-color: $main-color2
+    span
+        font-size: 15px
+        color: $white
+        +rmax($tabletmax)
+            font-size: 13px
+
+.diagram-user
+    width: 238px
+    height: 165px
+    border-radius: 2px
+    background-color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    z-index: 2
+    +rmax($tabletmax)
+        height: 100px
+        width: 200px
+    span
+        color: $main-color
+        font-size: 30px
+        font-weight: 700
+        +rmax($tabletmax)
+            font-size: 24px
+
+.middle-row
+    width: 100%
+    background-color: rgba(37, 37, 37, .5)
+    display: flex
+    flex-direction: column
+    padding: 31px 0
+    margin-bottom: 69px
+    position: relative
+    z-index: 2
+    +rmax($tabletmax)
+        padding: 20px 0
+        margin-bottom: 40px
+    .middle-el
+        width: 50%
+        height: 76px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        &:nth-child(even)
+            margin: 0 auto 22px 0
+            &:before
+                right: 0
+            .coub
+                right: -38px
+            .middle-el-wrap
+                margin: 0 120px 0 auto
+                +rmax($tabletmax)
+                    margin: 0 80px 0 auto
+        &:nth-child(odd)
+            margin: 0 0 22px auto
+            &:before
+                left: 0
+            .coub
+                left: -38px
+            .middle-el-wrap
+                margin: 0 auto 0 120px
+                +rmax($tabletmax)
+                    margin: 0 auto 0 80px
+        &:before
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            height: 2px
+            width: 120px
+            background-color: $main-color2
+            z-index: 1
+            +rmax($tabletmax)
+                width: 80px
+        .coub
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            size: 76px
+            border: 2px solid $main-color2
+            background-color: $black
+            z-index: 3
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                @extend %img
+        .middle-el-wrap
+            font-size: 15px
+            color: $main-color2
+            min-width: 236px
+            min-height: 55px
+            border: 2px solid $main-color2
+            padding: 16px 55px
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            z-index: 2
+            +rmax($tabletmax)
+                font-size: 13px
+                min-width: 200px
+                min-height: 45px
+                padding: 12px 15px
+
+.soft-connect
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 100%
+        height: 2px
+        width: 50px
+        background-color: $main-color2
+    &:after
+        content: ''
+        position: absolute
+        bottom: calc(50% - 1px)
+        right: calc(100% + 49px)
+        height: 250px
+        width: 2px
+        background-color: $main-color2
+
+
+.end-row
+    width: 100%
+    border: 1px solid $main-color2
+    background-color: #161616
+    padding: 23px 34px 19px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 2
+    span
+        width: 29px
+        height: 34px
+        position: relative
+        z-index: 2
+    .end-line
+        position: absolute
+        top: 50%
+        transform: translateY(-50)
+        height: 2px
+        width: calc(100% - 68px)
+        background-color: $white
+        z-index: 1

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leonardo | Downloads Detalic</title>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    {% include "partials/header.html" %}
+    <main>
+        <div class="nonbackground content">
+            <div class="container">
+                <div class="content-wrap">
+                    <div class="dd-info">
+                        <h1 class="dd-title">
+                            Mac Download Details
+                        </h1>
+                        <p class="dd-desc text-font">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratio quidem vestra sic cogit. Quis Aristidem non mortuum diligit? Iubet igitur nos Pythius Apollo noscere nosmet ipsos. Sit enim idem caecus, debilis. 
+                        </p>
+                        <div class="video-mobile"></div>
+                        <ul class="leonardo-list">
+                            <li>
+                                <span class="text-font text-semibold">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text-font text-semibold">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text-font text-semibold">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text-font text-semibold">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text-font text-semibold">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text-font text-semibold">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="dd-btn download-btn">
+                            <a href="#">
+                                <img src="img/content/apple.png" alt="download">
+                                <span>Free Mac Download</span>
+                                <p class="nondownload">
+                                    Dowhload on a desktop computer
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dd-video">
+                        <div id="video-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include "partials/footer.html" %}
+    {% include "partials/scripts.html" %}
+    <script>
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+                player = new YT.Player('video-placeholder', {
+                width: '100%',
+                height: '100%',
+                videoId: 'Xa0Q0J5tOP0',
+                playerVars: {
+                    showinfo: 0,
+                    autoplay: 0,
+                    rel: 0
+                },
+                events: {
+
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

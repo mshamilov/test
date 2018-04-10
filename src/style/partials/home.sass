@@ -1,0 +1,265 @@
+.home-page
+    position: relative
+    // background-image: url('../img/content/home-bg1.png'), url('../img/content/home-bg2.png')
+    // background-size: 100% auto, 100% auto
+    // background-repeat: no-repeat, no-repeat
+    // background-position: center 0, center 100%
+    +rmax($mobilerotatemax)
+        padding: 67px 0 0
+    .home-bg
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        height: auto
+        z-index: -1
+        +rmax($mobilerotatemax)
+            display: none
+        &.top
+            top: -300px
+            +rmax(1660)
+                top: 0
+        &.bot
+            bottom: -450px
+            +rmax(1660)
+                bottom: 0
+        img
+            size: 100% auto
+            object-fit: cover
+
+.rendering
+    padding: 100px 0 55px
+    +rmax($tabletmax)
+        padding: 80px 0
+    +rmax($mobilerotatemax)
+        padding: 40px 0
+        background-image: url('../img/content/mob-bg1.png')
+        background-size: 100% 300px
+        background-repeat: no-repeat
+        background-position: 0 0
+    &.second-cube
+        padding: 65px 0 55px
+        +rmax($tabletmax)
+            padding: 80px 0
+    &.order
+        .render-info
+            order: 2
+        .render-img
+            order: 1
+        +rmax($mobilerotatemax)
+            background-image: url('../img/content/mob-bg2.png')
+            background-size: 100% 450px
+            background-repeat: no-repeat
+            background-position: 0 50px
+    &.small-element
+        .render-info
+            margin-top: 180px
+            +rmax($laptopmax)
+                margin-top: 20px
+            .render-title
+                font-size: 55px
+                line-height: 1
+                +rmax($mobilerotatemax)
+                    font-size: 40px
+                    line-height: 50px
+            .render-line
+                margin: 40px 0
+                +rmax($laptopmax)
+                    margin: 25px 0
+                +rmax($mobilerotatemax)
+                    margin: 25px auto
+            .render-btn
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                +rmax($laptopmax)
+                    flex-wrap: wrap
+                +rmax($mobilerotatemax)
+                    flex-direction: column
+                    align-items: center
+                .download-btn
+                    width: auto
+                    padding-left: 0
+                    +rmax($laptopmax)
+                        padding: 0
+                        margin-bottom: 20px
+                    a
+                        margin-left: 0
+                        +rmax($laptopmax)
+                            min-width: 260px
+
+        .render-img
+            justify-content: flex-start
+            +rmax($laptopmax)
+                width: 40%
+            +rmax($mobilerotatemax)
+                width: 100%
+            .render-img_cube
+                max-width: 400px
+                size: auto
+                margin: 0 auto auto 0
+                +rmax($laptopmax)
+                    max-width: 360px
+                +rmax($tabletmax)
+                    max-width: 255px
+                +rmax($mobilerotatemax)
+                    margin: 0 auto
+                    max-width: 220px
+    &.order-normal
+        +rmax($mobilerotatemax)
+            background-image: url('../img/content/mob-bg3.png')
+            background-size: 100% 450px
+            background-repeat: no-repeat
+            background-position: 0 0
+        .render-img
+            justify-content: flex-end
+            .render-img_cube
+                max-width: 520px
+                size: auto
+                margin: 0 0 auto auto
+                +rmax($mobilerotatemax)
+                    max-width: 250px
+        .render-desc
+            margin: 0 0 25px
+
+.rendering-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    +rmax($mobilerotatemax)
+        flex-wrap: wrap
+
+.render-info
+    width: 50%
+    +rmax($mobilerotatemax)
+        width: 100%
+        order: 2
+        text-align: center
+    &.animate
+        .render-title
+            opacity: 0
+            transition: opacity .4s linear 0.1s
+            will-change: opacity
+        .render-line
+            width: 0
+            transition: width .4s linear 1s
+            will-change: width
+        .render-desc
+            opacity: 0
+            transition: opacity .4s linear .4s
+            will-change: opacity
+        .render-btn
+            opacity: 0
+            transition: opacity .4s linear .7s
+            will-change: opacity
+        &.animate-active
+            .render-title
+                opacity: 1
+            .render-line
+                width: 120px
+            .render-desc
+                opacity: 1
+            .render-btn
+                opacity: 1
+    
+
+
+.render-title
+    color: $black
+    font-size: 80px
+    line-height: 83px
+    font-weight: 700
+    margin: 0
+    span
+        color: $main-color
+    +rmax($tabletmax)
+        font-size: 60px
+    +rmax($mobilerotatemax)
+        font-size: 40px
+        line-height: 50px
+
+.render-line
+    margin: 50px 0
+    width: 120px
+    height: 3px
+    background: $main-color
+    border: 0
+    +rmax($laptopmax)
+        margin: 35px 0
+    +rmax($mobilerotatemax)
+        margin: 25px auto
+        
+
+.render-desc
+    font-size: 30px
+    line-height: 32px
+    color: $black
+    margin: 0 0 60px
+    +rmax($laptopmax)
+        margin: 0 0 45px
+    +rmax($tabletmax)
+        margin: 0 0 35px
+        font-size: 25px
+    +rmax($mobilerotatemax)
+        font-size: 20px
+    &.render-desc-small
+        font-size: 20px
+        margin: 0 0 45px
+        +rmax($laptopmax)
+            margin: 0 0 30px
+
+.render-btn
+    +rmax($mobilerotatemax)
+        display: none
+    a
+        // border: 1px solid #cccccc
+        background-color: #07e2c9
+        padding: 17px 50px
+        color: $white
+        font-size: 20px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 1px
+            width: 0
+            background-color: $white
+            transition: all .6s
+        &:hover
+            &:before
+                width: 100%
+
+.render-img
+    width: 50%
+    display: flex
+    justify-content: flex-end
+    align-items: flex-start
+    transition: all 1.5s
+    transform: translateX(0)
+    +rmax($mobilerotatemax)
+        width: 100%
+        transform: translate(0, 0) !important
+        order: 1
+        justify-content: center !important
+        align-items: center !important
+    .render-img_cube
+        max-width: 410px
+        size: auto
+        margin: 100px 0 auto
+        +rmax($laptopmax)
+            margin: 25px 0 auto
+            max-width: 375px
+        +rmax($tabletmax)
+            margin: 15px 0 auto
+            max-width: 255px
+        +rmax($mobilerotatemax)
+            margin: 0 auto
+            max-width: 220px
+        
+

@@ -1,0 +1,110 @@
+.contact
+    text-align: center
+
+.contact-form
+    margin: 80px 0 0
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: stretch
+    +rmax($tabletmax)
+        margin: 30px 0 0
+
+.contact-wrap
+    width: calc(50% - 60px)
+    +rmax($laptopmax)
+        width: calc(50% - 40px)
+    +rmax($tabletmax)
+        width: calc(50% - 20px)
+    +rmax($mobilerotatemax)
+        width: 100%
+
+.form-group
+    &.contact-group
+        width: 100%
+        height: 60px
+        position: relative
+        margin: 0 0 50px
+        +rmax($tabletmax)
+            margin: 0 0 30px
+        +rmax($mobilerotatemax)
+            margin: 0 0 40px
+        &.contact-group-msg
+            width: calc(50% - 60px)
+            height: auto
+            margin: 0 0 50px
+            +rmax($laptopmax)
+                width: calc(50% - 40px)
+            +rmax($tabletmax)
+                width: calc(50% - 20px)
+                margin: 0 0 30px
+            +rmax($mobilerotatemax)
+                width: 100%
+                height: 250px
+                margin: 0 0 40px
+            textarea
+                line-height: 1.5
+        input, textarea
+            size: 100%
+            padding: 16px 10px 16px 0
+            font-size: 20px
+            color: $black
+            border: 0
+            outline: none
+            background-color: transparent
+            resize: none
+            &:focus
+                +placeholder
+                    opacity: 0
+                &+span
+                    &:before
+                        width: 100%
+                        transition: width 1s
+            +placeholder
+                opacity: 0.5
+                font-weight: 300
+                font-style: italic
+                line-height: 1
+                transition: .6s
+                will-change: opacity
+        span
+            position: absolute
+            bottom: 0
+            left: 0
+            size: 100% 1px
+            background-color: $black
+            &:before
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                size: 0 1px
+                transition: width .3s
+                will-change: width
+                background-color: $main-color2
+    &.contact-btn
+        margin: auto
+        button
+            padding: 15px 56px
+            background-color: $main-color
+            font-size: 17px
+            color: $white
+            border: 0
+            margin: 0 0 50px
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 1px
+                width: 0
+                background-color: $white
+                transition: all .6s
+            &:hover
+                &:before
+                    width: 100%
+            +rmax($mobilerotatemax)
+                margin: 0
