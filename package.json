@@ -1,0 +1,61 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "author": "glaka",
+  "main": "gulpfile.js",
+  "description": "start project",
+  "devDependencies": {
+    "@cedx/gulp-php-minify": "*",
+    "autoprefixer": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-env": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-es2015-script": "*",
+    "babel-preset-es2015-webpack": "*",
+    "browser-sync": "*",
+    "css-mqpacker": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-changed": "*",
+    "gulp-clean-css": "*",
+    "gulp-data": "*",
+    "gulp-debug": "*",
+    "gulp-htmlmin": "*",
+    "gulp-if": "*",
+    "gulp-imagemin": "*",
+    "gulp-nunjucks": "*",
+    "gulp-load-plugins": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-postcss": "*",
+    "gulp-remove-logging": "*",
+    "gulp-rigger": "*",
+    "gulp-sass": "*",
+    "gulp-size": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-watch": "*",
+    "gulp.spritesmith": "*",
+    "imagemin-pngquant": "*",
+    "no-console-webpack-plugin": "*",
+    "on-build-webpack": "*",
+    "path": "*",
+    "postcss-csso": "*",
+    "postcss-short": "*",
+    "uglifyjs-webpack-plugin": "*",
+    "vinyl-named": "*",
+    "vinyl-buffer": "*",
+    "webpack": "*",
+    "webpack-stream": "*"
+  },
+  "dependencies": {}
+}
